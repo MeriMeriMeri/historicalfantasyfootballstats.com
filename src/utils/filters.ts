@@ -19,6 +19,8 @@ export function filterByYearRange(
   }
 
   switch (yearFilter) {
+    case 'Last55':
+      return data.filter((p) => p.year >= CURRENT_YEAR - 55);
     case 'Last35':
       return data.filter((p) => p.year >= CURRENT_YEAR - 35);
     case '2020s':

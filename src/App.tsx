@@ -4,26 +4,69 @@ import { ScoringModal } from './components/ScoringModal';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Header */}
-      <header className="bg-emerald-800 text-white py-4 px-4">
+      <header className="bg-emerald-800 text-white py-6 px-4">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-xl md:text-2xl font-bold">Fantasy MVP</h1>
-          <p className="text-emerald-200 text-sm">Historical Fantasy Football Stats (1970-2024)</p>
+          <h1 className="text-2xl md:text-3xl font-bold">Fantasy MVP</h1>
+          <p className="text-emerald-200 text-sm mt-1">Historical Fantasy Football Stats (1970-2024)</p>
+          <p className="text-emerald-100/80 text-sm mt-3 max-w-2xl">
+            Compare fantasy football performance across 55 years of data. Filter by position and year,
+            customize your league's scoring settings, and discover the greatest fantasy seasons of all time.
+          </p>
         </div>
       </header>
 
       {/* Filter Bar */}
-      <div className="max-w-7xl mx-auto">
-        <FilterBar />
-      </div>
+      <FilterBar />
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 py-6">
+      <main className="max-w-7xl mx-auto px-4 py-6 flex-1 w-full">
+        {/* Top 500 note */}
+        <p className="text-sm text-gray-500 mb-3">
+          Showing top 500 results sorted by fantasy points
+        </p>
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <StatsTable />
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-gray-200 text-gray-600 py-6 px-4 mt-auto">
+        <div className="max-w-7xl mx-auto text-center text-sm">
+          <p>
+            Made with ❤️ by{' '}
+            <a
+              href="https://merimerimeri.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-600 hover:text-emerald-700 underline"
+            >
+              Stephen Meriwether
+            </a>
+          </p>
+          <p className="mt-2 space-x-4">
+            <a
+              href="https://x.com/stephenmhoc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-gray-900"
+            >
+              Twitter
+            </a>
+            <span className="text-gray-400">•</span>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-gray-900"
+            >
+              Open Source on GitHub
+            </a>
+          </p>
+          <p className="mt-2 text-gray-400">Go Texans!</p>
+        </div>
+      </footer>
 
       {/* Scoring Config Modal */}
       <ScoringModal />

@@ -16,6 +16,7 @@ export const POSITIONS: PositionFilter[] = ['All', 'QB', 'RB', 'WR', 'TE'];
 
 export const YEAR_FILTERS: { value: YearFilter; label: string }[] = [
   { value: 'Last35', label: 'Last 35 Years' },
+  { value: 'Last55', label: 'Last 55 Years' },
   { value: '2020s', label: "2020's" },
   { value: '2010s', label: "2010's" },
   { value: '2000s', label: "2000's" },

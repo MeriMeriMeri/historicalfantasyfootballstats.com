@@ -22,7 +22,9 @@ const baseColumns: ColumnDef<PlayerSeasonWithPoints>[] = [
     accessorKey: 'fantasyPoints',
     header: 'Fantasy Pts',
     size: 100,
-    cell: ({ getValue }) => getValue<number>().toFixed(1),
+    cell: ({ getValue }) => (
+      <span className="font-bold">{getValue<number>().toFixed(1)}</span>
+    ),
   },
   {
     accessorKey: 'games',
@@ -65,25 +67,31 @@ export function getColumnsForPosition(
 ): ColumnDef<PlayerSeasonWithPoints>[] {
   switch (position) {
     case 'QB':
+      // QB: passing first, then rushing, then receiving at the end
       return [
         ...baseColumns,
         ...passingColumns,
         ...rushingColumns,
+        ...receivingColumns,
         ...fumbleColumns,
       ];
     case 'RB':
+      // RB: rushing first, then receiving, then passing at the end
       return [
         ...baseColumns,
         ...rushingColumns,
         ...receivingColumns,
+        ...passingColumns,
         ...fumbleColumns,
       ];
     case 'WR':
     case 'TE':
+      // WR/TE: receiving first, then rushing, then passing at the end
       return [
         ...baseColumns,
         ...receivingColumns,
         ...rushingColumns,
+        ...passingColumns,
         ...fumbleColumns,
       ];
     case 'All':
