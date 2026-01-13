@@ -32,3 +32,4 @@ playwright-report
 *.csv
 
 .playwright-mcp
+.claude
