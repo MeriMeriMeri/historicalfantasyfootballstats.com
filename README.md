@@ -1,5 +1,7 @@
 # Fantasy MVP
 
+[![CI](https://github.com/MeriMeriMeri/historicalfantasyfootballstats.com/actions/workflows/test.yml/badge.svg)](https://github.com/MeriMeriMeri/historicalfantasyfootballstats.com/actions/workflows/test.yml)
+
 A static site for comparing historical fantasy football statistics across 55 years of data (1970-2024).
 
 ## Features
@@ -31,8 +33,8 @@ A static site for comparing historical fantasy football statistics across 55 yea
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/fantasymvp.git
-   cd fantasymvp
+   git clone https://github.com/MeriMeriMeri/historicalfantasyfootballstats.com.git
+   cd historicalfantasyfootballstats.com
    ```
 
 2. Install dependencies:
