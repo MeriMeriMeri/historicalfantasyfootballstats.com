@@ -59,6 +59,7 @@ A static site for comparing historical fantasy football statistics across 55 yea
 ## Scripts
 
 - `npm run dev` - Start development server
+- `npm run lint` - Run ESLint
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run process-data` - Convert CSV to JSON
